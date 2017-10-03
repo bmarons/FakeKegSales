@@ -58,6 +58,13 @@ namespace TestFakeKegSales
         }
 
         [TestMethod]
+        public void TestGetDistributorDict()
+        {
+            var test = HelperFunctions.GetDistributorDict("1/2 Miller Lite");
+            Assert.AreEqual(test, "Miller of the Rockies");
+        }
+
+        [TestMethod]
         public void TestGetBeer()
         {
             Assert.AreEqual(HelperFunctions.GetBeer(), "1/2 Miller Lite");
