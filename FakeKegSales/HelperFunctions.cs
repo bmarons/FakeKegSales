@@ -15,6 +15,11 @@ namespace FakeKegSales
                 return start + randTimeSpan;
         }
 
+        public static string GetDistributor(string beerName)
+        {
+            return "";
+        }
+
     }
 
 }
