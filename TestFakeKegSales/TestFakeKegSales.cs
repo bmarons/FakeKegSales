@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestFakeKegSales
 {
     [TestClass]
-    public class UnitTest1
+    public class TestFakeKegSales
     {
         [TestMethod]
         public void TestToString()
@@ -14,12 +14,14 @@ namespace TestFakeKegSales
             testKeg.SaleTime = new DateTime(2017, 1, 18,12,12,12);
             testKeg.Distributor = "Miller of the Rockies";
             testKeg.KegType = "1/2 Miller Lite";
-            Console.WriteLine(testKeg.ToString());
             Assert.AreEqual(testKeg.ToString(), "1/2 Miller Lite,Miller of the Rockies,1/18/2017 12:12:12 PM");
+        }
 
-            
-
-
+        [TestMethod]
+        public void TestToStringEmpty()
+        {
+            var testKeg = new KegSale();
+            Assert.AreEqual(testKeg.ToString(), ",,1/1/0001 12:00:00 AM");
         }
     }
 }
