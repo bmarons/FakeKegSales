@@ -14,13 +14,20 @@ namespace FakeKegSales
         {
             return KegType + "," + Distributor + "," + SaleTime;
         }
+        
     }
 
-    class Program
+
+
+
+
+    class FakeKegSales
     {
         static void Main(string[] args)
         {
             Console.WriteLine("I am the main program");
         }
+
     }
+
 }

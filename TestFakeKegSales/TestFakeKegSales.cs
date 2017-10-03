@@ -32,5 +32,13 @@ namespace TestFakeKegSales
             testKeg.KegType = "1/2 Miller Lite";
             Assert.AreEqual(testKeg.ToString(), "1/2 Miller Lite,,1/18/2017 12:12:12 PM");
         }
+
+        [TestMethod]
+        public void TestrandDateTime()
+        {
+            Assert.AreEqual(new DateTime(), HelperFunctions.RandDateTime());
+        }
+
+
     }
 }
