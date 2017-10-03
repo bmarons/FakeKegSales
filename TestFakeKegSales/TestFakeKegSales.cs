@@ -23,5 +23,14 @@ namespace TestFakeKegSales
             var testKeg = new KegSale();
             Assert.AreEqual(testKeg.ToString(), ",,1/1/0001 12:00:00 AM");
         }
+
+        [TestMethod]
+        public void TestToStringNoDistributor()
+        {
+            var testKeg = new KegSale();
+            testKeg.SaleTime = new DateTime(2017, 1, 18, 12, 12, 12);
+            testKeg.KegType = "1/2 Miller Lite";
+            Assert.AreEqual(testKeg.ToString(), "1/2 Miller Lite,,1/18/2017 12:12:12 PM");
+        }
     }
 }
