@@ -5,10 +5,14 @@ namespace FakeKegSales
 {
 
     public class HelperFunctions
+
     {
-        public static DateTime RandDateTime()
+        private static readonly Random Rnd = new Random();
+        public static DateTime RandDateTime(DateTime start, DateTime end)
         {
-            return new DateTime();
+                var range = end - start;
+                var randTimeSpan = new TimeSpan((long)(Rnd.NextDouble() * range.Ticks));
+                return start + randTimeSpan;
         }
 
     }
