@@ -55,8 +55,6 @@ namespace TestFakeKegSales
         {
             var test = HelperFunctions.GetDistributor("1/2 Miller Lite");
             Assert.AreEqual(test, "Miller of the Rockies");
-
-
         }
 
 

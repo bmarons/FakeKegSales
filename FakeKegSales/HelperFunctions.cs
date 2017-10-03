@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 
 namespace FakeKegSales
 {
@@ -15,9 +17,18 @@ namespace FakeKegSales
                 return start + randTimeSpan;
         }
 
+
+
+
+        public static List<KeyValuePair<string, string>> beerToDDistributor = new List<KeyValuePair<string, string>>()
+        {
+            new KeyValuePair<string, string>("1/2 Miller Lite","Miller of the Rockies")
+        };
         public static string GetDistributor(string beerName)
         {
-            return "";
+
+            var distributor = beerToDDistributor.First(kvp => kvp.Key == beerName).Value;
+            return distributor;
         }
 
     }
