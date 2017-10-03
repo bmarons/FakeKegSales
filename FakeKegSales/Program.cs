@@ -12,7 +12,7 @@ namespace FakeKegSales
 
         public override string ToString()
         {
-            return KegType + "," + Distributor + " " + SaleTime;
+            return KegType + "," + Distributor + "," + SaleTime;
         }
     }
 
@@ -20,7 +20,7 @@ namespace FakeKegSales
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("I am the main program");
         }
     }
 }
