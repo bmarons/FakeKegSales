@@ -41,6 +41,15 @@ namespace TestFakeKegSales
             var testDateTime = HelperFunctions.RandDateTime(startDate,endDate);
             Assert.IsTrue(testDateTime.Ticks > startDate.Ticks && testDateTime.Ticks < endDate.Ticks);
         }
+        [TestMethod]
+        public void TestRandDateTimeSameTime()
+        {
+            var startDate = new DateTime(2015, 1, 18, 12, 12, 12);
+            var endDate = new DateTime(2015, 1, 18, 12, 12, 12);
+            var testDateTime = HelperFunctions.RandDateTime(startDate, endDate);
+            Assert.IsTrue(testDateTime.Ticks == testDateTime.Ticks);
+        }
+
 
 
     }
