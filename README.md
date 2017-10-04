@@ -19,3 +19,5 @@ Download the code and open the .sln file is Visual Studio 2017
 
 Tests are run using the standard Visual Studio 2017 test suit
 
+[![Analytics](https://ga-beacon.appspot.com/UA-107484830-1/readme?pixel)](https://github.com/igrigorik/ga-beacon)
+
