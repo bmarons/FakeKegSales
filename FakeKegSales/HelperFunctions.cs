@@ -18,31 +18,8 @@ namespace FakeKegSales
         }
 
 
-        public static List<KeyValuePair<string, string>> BeerToDDistributor = new List<KeyValuePair<string, string>>()
-        {
-            new KeyValuePair<string, string>("1/2 Blue Moon","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/6 Blue Moon","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/2 Bud Light","Eagle Dist Co"),
-            new KeyValuePair<string, string>("1/4 Bud Light","Eagle Dist Co"),
-            new KeyValuePair<string, string>("1/2 Budweiser","Eagle Dist Co"),
-            new KeyValuePair<string, string>("1/6 Budweiser","Eagle Dist Co"),
-            new KeyValuePair<string, string>("1/2 Coors Light","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/4 Coors Light","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/2 Dos Equis Amber","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/2 Dos Equis Lager","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/6 Dos Equis Lager","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/2 Michelob Ultra","Eagle Dist Co"),
-            new KeyValuePair<string, string>("1/6 Michelob Ultra","Eagle Dist Co"),
-            new KeyValuePair<string, string>("1/2 Miller Lite","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/4 Miller Lite","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/2 Natural Light","Eagle Dist Co"),
-            new KeyValuePair<string, string>("PBR 1/2 Barrel Keg","Miller of the Rockies"),
-            new KeyValuePair<string, string>("1/2 Yuengling Lager","PA Proud"),
-            new KeyValuePair<string, string>("1/4 Yuengling Lager","PA Proud"),
 
-        };
-
-        public static Dictionary<string, string> BeerToDDistributorDict = new Dictionary<string, string>()
+        public static Dictionary<string, string> BeerToDDistributor = new Dictionary<string, string>()
         {
             { "1/2 Blue Moon","Miller of the Rockies"},
             { "1/6 Blue Moon","Miller of the Rockies"},
@@ -68,17 +45,10 @@ namespace FakeKegSales
 
         public static string GetDistributor(string beerName)
         {
-            var distributor = BeerToDDistributor.First(kvp => kvp.Key == beerName).Value;
-            return distributor;
-        }
-
-
-        public static string GetDistributorDict(string beerName)
-        {
 
             
 
-            var distributor = BeerToDDistributorDict[beerName];
+            var distributor = BeerToDDistributor[beerName];
             return distributor;
         }
 

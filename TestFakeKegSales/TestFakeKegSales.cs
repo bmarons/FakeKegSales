@@ -1,12 +1,16 @@
 using System;
 using FakeKegSales;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Collections.Generic;
 
 namespace TestFakeKegSales
 {
+    
     [TestClass]
     public class TestFakeKegSales
     {
+
+        static Random rnd = new Random();
         [TestMethod]
         public void TestToString()
         {
@@ -57,13 +61,8 @@ namespace TestFakeKegSales
             Assert.AreEqual(test, "Miller of the Rockies");
         }
 
-        [TestMethod]
-        public void TestGetDistributorDict()
-        {
-            var test = HelperFunctions.GetDistributorDict("1/2 Miller Lite");
-            Assert.AreEqual(test, "Miller of the Rockies");
-        }
 
+ 
         [TestMethod]
         public void TestGetBeer()
         {
