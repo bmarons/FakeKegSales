@@ -90,9 +90,6 @@ namespace FakeKegSales
             fileName.WriteLine(sale);
         }
 
-
-
-
     }
 
 }

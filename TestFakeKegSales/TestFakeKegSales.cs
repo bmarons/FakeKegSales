@@ -107,7 +107,6 @@ namespace TestFakeKegSales
             Assert.AreEqual(test.ToString(), readLine);
             r.Close();
             File.Delete("testing.txt");
-
         }
     }
 }
