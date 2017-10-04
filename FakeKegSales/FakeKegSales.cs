@@ -29,7 +29,29 @@ namespace FakeKegSales
         static Random rnd = new Random();
         static void Main(string[] args)
         {
-            Console.WriteLine("I am the main program");
+            Console.WriteLine("Enter a Start Date");
+            var startDate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Enter An End Date");
+            var endDate = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a filename");
+            var fileName = Console.ReadLine();
+            Console.WriteLine("Enter number of sales");
+            var numSales = Int32.Parse(Console.ReadLine());
+
+            StreamWriter w = File.AppendText(fileName);
+
+            for (int i = 0; i < numSales; i++)
+            {
+                KegSale test = new KegSale();
+                test.SaleTime = HelperFunctions.RandDateTime(startDate,endDate);
+                test.KegType = HelperFunctions.GetBeer();
+                test.Distributor = HelperFunctions.GetDistributor(test.KegType);
+                HelperFunctions.WriteToFile(test.ToString(), w);
+                
+            }
+
+            w.Close();
+
         }
 
 

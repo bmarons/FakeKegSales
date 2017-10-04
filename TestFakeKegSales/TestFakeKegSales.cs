@@ -90,10 +90,6 @@ namespace TestFakeKegSales
             r.Close();
             File.Delete("testing.txt");
 
-
-
-
-
         }
     }
 }
