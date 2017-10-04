@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.IO;
 using System.Linq;
 
 namespace FakeKegSales
@@ -81,6 +82,12 @@ namespace FakeKegSales
             return _beersList[0];
         }
 
+        
+
+        public static void WriteToFile(string sale,StreamWriter fileName)
+        {
+            fileName.WriteLine(sale);
+        }
 
 
 

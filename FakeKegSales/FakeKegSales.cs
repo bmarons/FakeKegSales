@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using System.IO;
 
 namespace FakeKegSales
 { 
@@ -29,8 +30,6 @@ namespace FakeKegSales
         static void Main(string[] args)
         {
             Console.WriteLine("I am the main program");
-
-
         }
 
 
