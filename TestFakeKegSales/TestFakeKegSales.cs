@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace TestFakeKegSales
 {
@@ -70,7 +71,24 @@ namespace TestFakeKegSales
         [TestMethod]
         public void TestGetBeer()
         {
-            Assert.AreEqual(HelperFunctions.GetBeer(), "1/2 Miller Lite");
+
+            var beerlist = new List<string>();
+
+            for (int i = 0; i < 100; i++)
+            {
+                beerlist.Add(HelperFunctions.GetBeer());
+                
+            }
+
+            var total = 0;
+            for (int i = 0; i < beerlist.Count; i++)
+            {
+                if (beerlist[i] == "1/2 Miller Lite")
+                    total++;
+            }
+
+            Assert.IsTrue(total < 50);
+            Console.WriteLine(total);
         }
 
         [TestMethod]

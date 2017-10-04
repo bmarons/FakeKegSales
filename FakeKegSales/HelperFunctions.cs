@@ -79,11 +79,12 @@ namespace FakeKegSales
 
         public static string GetBeer()
         {
-            return _beersList[0];
+            var r = Rnd.Next(_beersList.Count);
+            return _beersList[r];
         }
 
         
-
+    
         public static void WriteToFile(string sale,StreamWriter fileName)
         {
             fileName.WriteLine(sale);
